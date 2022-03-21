@@ -1,0 +1,10 @@
+{
+    "REPORTS_NAME_HEADER_KEY": "Nombre",
+    "REPORTS_START_DATE_HEADER_KEY": "Fecha de inicio",
+    "REPORTS_END_DATE_HEADER_KEY": "Fecha final",
+    "RUN_REPORT_BUTTON_KEY": "Ejecutar Informe",
+    "REPORT_FORMAT_KEY": "Formato",
+    "REPORTS_TITLE_KEY": "Informes",
+    "REPORTS_TITLE_WITHOUT_DATE_RANGE_KEY": "Informes sin intervalo de fecha",
+    "REPORTS_MISSING_WARNING_MESSAGE_KEY": "Los nuevos informes pueden ser configurados en un archivo json dentro de openmrs/apps/reports/reports.json. \nPor favor consulte la documentacion para una mayor información sobre cómo configurar exportaciones preconfiguradas"
+}

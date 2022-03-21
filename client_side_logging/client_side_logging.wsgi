@@ -1,0 +1,1 @@
+from client_side_logging import app as application
