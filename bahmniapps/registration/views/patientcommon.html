@@ -7,9 +7,11 @@
                 </div>
                 <div class="field-value" id="patientNameLocal">
                     <span ng-repeat="nameField in patientNameDisplayOrder">
+                        <!--This area below is where we place the actual fields that contain each of the name slots-->
                         <input type="text" id="givenNameLocal" ng-model="patient.givenNameLocal" pattern-validate placeholder="{{::getTranslatedPatientControls(patientConfiguration.local()['placeholderForGivenName'])}}" focus-me="true" ng-if="nameField === 'firstName'">
                         <input ng-show="::showMiddleName" type="text" id="middleNameLocal" ng-model="patient.middleNameLocal" pattern-validate placeholder="{{::getTranslatedPatientControls(patientConfiguration.local()['placeholderForMiddleName'])}}" ng-if="nameField === 'middleName'">
                         <input type="text" ng-show="::showLastName" id="familyNameLocal" ng-model="patient.familyNameLocal" pattern-validate placeholder="{{::getTranslatedPatientControls(patientConfiguration.local()['placeholderForFamilyName'])}}" ng-if="nameField === 'lastName'">
+                        <input type="text" ng-show="::showSurrName" id="surrNameLocal" ng-model="patient.surrNameLocal" pattern-validate placeholder="{{::getTranslatedPatientControls(patientConfiguration.local()['placeholderForsurrName'])}}" ng-if="nameField === 'surrName'">
                     </span>
                 </div>
             </article>
