@@ -11,7 +11,7 @@
                         <input type="text" id="givenNameLocal" ng-model="patient.givenNameLocal" pattern-validate placeholder="{{::getTranslatedPatientControls(patientConfiguration.local()['placeholderForGivenName'])}}" focus-me="true" ng-if="nameField === 'firstName'">
                         <input ng-show="::showMiddleName" type="text" id="middleNameLocal" ng-model="patient.middleNameLocal" pattern-validate placeholder="{{::getTranslatedPatientControls(patientConfiguration.local()['placeholderForMiddleName'])}}" ng-if="nameField === 'middleName'">
                         <input type="text" ng-show="::showLastName" id="familyNameLocal" ng-model="patient.familyNameLocal" pattern-validate placeholder="{{::getTranslatedPatientControls(patientConfiguration.local()['placeholderForFamilyName'])}}" ng-if="nameField === 'lastName'">
-                        <input type="text" ng-show="::showsurname" id="surnameLocal" ng-model="patient.surnameLocal" pattern-validate placeholder="{{::getTranslatedPatientControls(patientConfiguration.local()['placeholderForSurrName'])}}" ng-if="nameField === 'surrName'">
+                        <input type="text" ng-show="::showsurname" id="surnameLocal" ng-model="patient.surnameLocal" pattern-validate placeholder="{{::getTranslatedPatientControls(patientConfiguration.local()['placeholderForSurname'])}}" ng-if="nameField === 'surname'">
                     </span>
                 </div>
             </article>
@@ -37,6 +37,10 @@
                       <input data-ng-switch-when="true" type="text" id="familyName" ng-model="$parent.patient.familyName" pattern-validate my-autocomplete source="getAutoCompleteList" response-map="getDataResults" data-item-type="personName" placeholder="{{ ::'REGISTRATION_LABEL_PATIENT_LAST_NAME' | translate}}" title="{{::'REGISTRATION_LABEL_PATIENT_ENTER_LAST_NAME' | translate}}" ng-required="::isLastNameMandatory">
                       <input data-ng-switch-default type="text" id="familyName" ng-model="patient.familyName" pattern-validate placeholder="{{ ::'REGISTRATION_LABEL_PATIENT_LAST_NAME' | translate}}" title="{{::'REGISTRATION_LABEL_PATIENT_ENTER_LAST_NAME' | translate}}" ng-required="::isLastNameMandatory">
                     </span>
+                    <span ng-show="::showSurname" data-ng-switch="::isAutoComplete('surname')" ng-if="nameField === 'surname'">
+                        <input data-ng-switch-when="true" type="text" id="surname" ng-model="$parent.patient.surname" pattern-validate my-autocomplete source="getAutoCompleteList" response-map="getDataResults" data-item-type="personName" placeholder="{{ ::'REGISTRATION_LABEL_PATIENT_SURR_NAME' | translate}}" title="{{::'REGISTRATION_LABEL_PATIENT_ENTER_SURR_NAME' | translate}}">
+                        <input data-ng-switch-default type="text" id="surname" ng-model="patient.surname" pattern-validate placeholder="{{ ::'REGISTRATION_LABEL_PATIENT_LAST_NAME' | translate}}" title="{{::'REGISTRATION_LABEL_PATIENT_ENTER_LAST_NAME' | translate}}">
+                      </span>
                 </span>
                     <!--<span class="input-label-inline caste-lastname" ng-show="showCasteSameAsLastName()">
                         <input type="checkbox" id="casteSameAsLastNameCheck" ng-model="patient.sameAsLastName"
