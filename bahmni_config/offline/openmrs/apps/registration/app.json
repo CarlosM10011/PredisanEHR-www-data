@@ -53,6 +53,7 @@
             "defaultIdentifierPrefix": "GAN",
             "defaultVisitType": "OPD",
             "showLastName": true,
+            "showSurname" : true,
             "isLastNameMandatory": true,
             "disablePhotoCapture": true,
             "searchByIdForwardUrl": "/patient/{{patientUuid}}",
@@ -110,7 +111,7 @@
                 "customAttributes": {
                     "label": "रुग्णाचे नाव",
                     "placeholder": "रुग्णाचे नाव",
-                    "fields": ["givenNameLocal", "middleNameLocal", "familyNameLocal"]
+                    "fields": ["givenNameLocal", "middleNameLocal", "familyNameLocal", "surnameLocal"]
                 }
             }
         }
