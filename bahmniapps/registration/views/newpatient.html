@@ -14,6 +14,10 @@
                     </div>
                 </section>
                 <section>
+                
+                <legend class="registraion_legend" ng-if="::addressLevels.length>0">
+                    <span class="mylegend"> {{ ::'REGISTRATION_LABEL_GENERAL_DATA' | translate}}</span>
+                </legend>
                     <article class="form-field existing-patient">
                         <div class="field-attribute">
                             <label class="control-label" for="patientID">{{:: getTranslatedPatientIdentifier(patient.primaryIdentifier.identifierType.name) | translate}}
@@ -25,10 +29,10 @@
                             </select>
                         </div>
 
-                        <!--div class="field-value field-value-has-identifier">
+                        <div class="field-value field-value-has-identifier">
                             <input type="text" id="registrationNumber" ng-model="patient.primaryIdentifier.registrationNumber" placeholder="{{:: getTranslatedPatientIdentifier(patient.primaryIdentifier.identifierType.description)}}" non-blank="patient.primaryIdentifier.isIdentifierRequired()" pattern-validate ng-change="patient.primaryIdentifier.generate()" focus-on="patient.primaryIdentifier.hasOldIdentifier" ng-show="patient.primaryIdentifier.hasOldIdentifier || !patient.primaryIdentifier.hasIdentifierSources()">
                             <div ng-show="::patient.primaryIdentifier.hasIdentifierSources() && showEnterID" class="fl">
-                                <!--div class="field-attribute hasOldIdentifier-field-attribute">
+                                <div class="field-attribute hasOldIdentifier-field-attribute">
                                     <label for="hasOldIdentifier" class="control-label">{{::'REGISTRATION_LABEL_ENTER_ID' | translate}}</label>
                                 </div>
                                 <div class="field-value">

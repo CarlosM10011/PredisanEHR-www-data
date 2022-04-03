@@ -26,37 +26,37 @@
         ],
         "config" : {
             "patientInformation": {
-                "generalData": {
-                    "title": "General Data",
-                    "attributes": [
-                        "temp",
-                        "education"
-                    ]
-                
-                },
                 "additionalPatientInformation": {
-                    "title": "Additional Patient Information",
+                    "title": "Additional Contact Information",
                     "attributes": [
-                        "distanceFromCenter",
-                        "isUrban",
-                        "cluster",
-                        "RationCard",
-                        "familyIncome",
-                        "debt",
-                        "cluster",
-                        "temp"
-                    ]
+                        "Name",
+                        "Relationship",
+                        "cellphone",
+                        "homephone",
+                        "Email",
+                        "Facebook",
+                        "Instagram",
+                        "mailingAddr"
+                    ],
+                    "order": 2
                 },
+
                 "hidden": {
                     "attributes": [
-			                  "distanceFromCenter",
+                        "email",
+                        "education",
+                        "occupation",
+                        "primaryContact",
+                        "secondaryContact",
+                        "acres",
+                        "debt",
+                        "distance",
                         "isUrban",
                         "cluster",
                         "RationCard",
                         "familyIncome",
                         "debt",
-                        "cluster",
-			                  "givenNameLocal"
+                        "cluster"
                     ]
                 },
                 "defaults":  {
@@ -79,6 +79,7 @@
             "searchByIdForwardUrl": "/patient/{{patientUuid}}",
             "showMiddleName": true,
             "showLastName": true,
+            "showSurname": true,
             "isLastNameMandatory": true,
             "showSaveConfirmDialog": false,
             "showBirthTime": true,
@@ -134,7 +135,7 @@
                 "customAttributes": {
                     "label": "Patient Name",
                     "placeholder": "Patient Name",
-                    "fields": ["givenNameLocal", "middleNameLocal", "familyNameLocal"]
+                    "fields": ["givenNameLocal", "middleNameLocal", "familyNameLocal", "surnameLocal"]
                 }
             }
         }

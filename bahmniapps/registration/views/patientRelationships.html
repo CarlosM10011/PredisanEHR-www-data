@@ -29,7 +29,7 @@
                         </label>
                     </div>
                     <div class="field-value">
-                        <select ng-model="newRelationship.relationshipType.uuid" ng-options="type.uuid as type.aIsToB for type in ::relationshipTypes" ng-change="clearRelationshipRow(newRelationship, $index);">
+                        <select ng-model="patient.relationship" ng-options="type.uuid as type.aIsToB for type in ::relationshipTypes" ng-change="clearRelationshipRow(newRelationship, $index);">
                             <option value="">{{ ::'REGISTRATION_LABEL_SELECT_RELATIONSHIP_TYPE' | translate}}</option>
                         </select>
                     </div>

@@ -5,16 +5,22 @@
                 <div class="field-attribute">
                     <label for="patientName">{{::getTranslatedPatientControls(patientConfiguration.local()['labelForNameField'])}}</label>
                 </div>
+                
+                
                 <div class="field-value" id="patientNameLocal">
                     <span ng-repeat="nameField in patientNameDisplayOrder">
                         <!--This area below is where we place the actual fields that contain each of the name slots-->
                         <input type="text" id="givenNameLocal" ng-model="patient.givenNameLocal" pattern-validate placeholder="{{::getTranslatedPatientControls(patientConfiguration.local()['placeholderForGivenName'])}}" focus-me="true" ng-if="nameField === 'firstName'">
+                        
                         <input ng-show="::showMiddleName" type="text" id="middleNameLocal" ng-model="patient.middleNameLocal" pattern-validate placeholder="{{::getTranslatedPatientControls(patientConfiguration.local()['placeholderForMiddleName'])}}" ng-if="nameField === 'middleName'">
+                        
                         <input type="text" ng-show="::showLastName" id="familyNameLocal" ng-model="patient.familyNameLocal" pattern-validate placeholder="{{::getTranslatedPatientControls(patientConfiguration.local()['placeholderForFamilyName'])}}" ng-if="nameField === 'lastName'">
                         <input type="text" ng-show="::showsurname" id="surnameLocal" ng-model="patient.surnameLocal" pattern-validate placeholder="{{::getTranslatedPatientControls(patientConfiguration.local()['placeholderForSurname'])}}" ng-if="nameField === 'surname'">
                     </span>
                 </div>
             </article>
+            
+            
             <article class="form-field patient-name-wrapper">
                 <div class="field-attribute">
                     <label for="patientName">{{ ::'REGISTRATION_LABEL_PATIENT_NAME' | translate}}<span class="asterick">*</span></label>
@@ -33,6 +39,7 @@
                       <input data-ng-switch-when="true" type="text" id="middleName" ng-model="$parent.patient.middleName" pattern-validate my-autocomplete source="getAutoCompleteList" response-map="getDataResults" data-item-type="personName" placeholder="{{ ::'REGISTRATION_LABEL_PATIENT_MIDDLE_NAME' | translate}}" title="{{::'REGISTRATION_LABEL_PATIENT_ENTER_MIDDLE_NAME' | translate}}">
                       <input data-ng-switch-default type="text" id="middleName" ng-model="patient.middleName" pattern-validate placeholder="{{ ::'REGISTRATION_LABEL_PATIENT_MIDDLE_NAME' | translate}}" title="{{::'REGISTRATION_LABEL_PATIENT_ENTER_MIDDLE_NAME' | translate}}">
                     </span>
+                    
                     <span ng-show="::showLastName" data-ng-switch="::isAutoComplete('familyName')" ng-if="nameField === 'lastName'">
                       <input data-ng-switch-when="true" type="text" id="familyName" ng-model="$parent.patient.familyName" pattern-validate my-autocomplete source="getAutoCompleteList" response-map="getDataResults" data-item-type="personName" placeholder="{{ ::'REGISTRATION_LABEL_PATIENT_LAST_NAME' | translate}}" title="{{::'REGISTRATION_LABEL_PATIENT_ENTER_LAST_NAME' | translate}}" ng-required="::isLastNameMandatory">
                       <input data-ng-switch-default type="text" id="familyName" ng-model="patient.familyName" pattern-validate placeholder="{{ ::'REGISTRATION_LABEL_PATIENT_LAST_NAME' | translate}}" title="{{::'REGISTRATION_LABEL_PATIENT_ENTER_LAST_NAME' | translate}}" ng-required="::isLastNameMandatory">
@@ -58,10 +65,11 @@
                 <div class="field-value showOn-small-screen" ng-show="::showCasteSameAsLastName()">
                     <input type="checkbox" id="casteSameAsLastNameCheck" ng-model="patient.sameAsLastName" ng-change="setCasteAsLastName()">
                 </div>-->
-                
             </article>
+            
+            
         </section>
-        <section class="form-field form-field-admission-type">
+        <!--section class="form-field form-field-admission-type">
             <article class="form-field">
                 <div class="field-attribute">
                     <label for="admissionType">{{ :: 'REGISTRATION_LABEL_ADMISSION_TYPE' | translate}} <span class="asterick">*</span></label>
@@ -74,7 +82,21 @@
                 </div>
                 
             </article>
-        </section>
+        </section-->
+        <!--section class="form-field form-field-case-file">
+            <article class="form-field">
+                <div class="field-attribute">
+                    <label for="caseFile">{{ :: 'REGISTRATION_LABEL_CASE_FILE' | translate}} <span class="asterick">*</span></label>
+                </div>
+                
+                 <div class="field-value">
+                    <select id="admisstionType" ng-model="patient.idNum" required="required" title="{{ 'REGISTRATION_LABEL_ADMISSION_TYPE'|translate }}" ng-options="name for type in idNum">
+                        <option value="">{{ ::'REGISTRATION_LABEL_ADMISSION_TYPE' | translate}}</option>
+                    </select>
+                </div>
+                
+            </article>
+        </section-->
         <section class="form-field form-field-gender">
             <article class="form-field">
                 <div class="field-attribute">
@@ -105,7 +127,7 @@
                 <ng-include src="'views/age.html'"></ng-include>
             </div>
         </section>
-        <legend class="registraion_legend" ng-if="::addressLevels.length>0">
+        <!--legend class="registraion_legend" ng-if="::addressLevels.length>0">
             <span class="mylegend"> {{ ::'REGISTRATION_LABEL_ADDRESS_INFO' | translate}}</span>
         </legend>
 
@@ -118,7 +140,7 @@
         </legend>
 
         <section>
-            <!--edit patient flow-->
+            <!--edit patient flow>
             <section>
                 <div ng-if="patient.uuid != undefined">
                     <article ng-repeat="identifier in patient.extraIdentifiers" class="form-field existing-patient">
@@ -165,7 +187,7 @@
                     </article>
                 </div>
             </section>
-        </section>
+        </section-->
 
         <legend class="registraion_legend" ng-if="patientConfiguration.customAttributeRows().length > 0">
             <span class="mylegend">{{ ::'REGISTRATION_LABEL_OTHER_INFO' | translate}}</span>
