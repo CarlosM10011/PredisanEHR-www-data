@@ -56,7 +56,8 @@
                         "familyIncome",
                         "debt",
                         "cluster",
-                        "surnameLocal"
+                        "surnameLocal",
+                        "temp"
                     ]
                 },
                 "defaults":  {
