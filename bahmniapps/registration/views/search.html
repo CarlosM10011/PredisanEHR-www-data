@@ -77,7 +77,7 @@
                     {{::result.extraIdentifiers[type.name]}}
                 </td>
 
-                <td>{{::result.givenName}} {{::result.middleName}} {{::result.familyName}}</td>
+                <td>{{::result.givenName}} {{::result.middleName}} {{::result.familyName}} {{::reult.surname}}</td>
                 <td ng-repeat="field in ::personSearchResultsConfig.fields track by $index">{{::result.customAttribute[field] || "" | bahmniDateInStrictMode}}</td>
                 <td>{{::result.gender}}</td>
                 <td>{{::result.age}}</td>
