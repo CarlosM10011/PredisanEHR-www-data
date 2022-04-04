@@ -37,8 +37,7 @@
                         "Facebook",
                         "Instagram",
                         "mailingAddr"
-                    ],
-                    "order": 2
+                    ]
                 },
 
                 "hidden": {

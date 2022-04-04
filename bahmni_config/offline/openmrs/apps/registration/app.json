@@ -50,7 +50,7 @@
             },
 
             "autoCompleteFields":["familyName", "caste"],
-            "defaultIdentifierPrefix": "GAN",
+            "defaultIdentifierPrefix": "CER",
             "defaultVisitType": "OPD",
             "showLastName": true,
             "showSurname" : true,
