@@ -127,7 +127,7 @@
                 <ng-include src="'views/age.html'"></ng-include>
             </div>
         </section>
-        <!--legend class="registraion_legend" ng-if="::addressLevels.length>0">
+        <legend class="registraion_legend" ng-if="::addressLevels.length>0">
             <span class="mylegend"> {{ ::'REGISTRATION_LABEL_ADDRESS_INFO' | translate}}</span>
         </legend>
 
@@ -135,7 +135,7 @@
 
         <section top-down-address-fields data-address-levels="::addressLevels" data-address="patient.address" field-validation="::fieldValidation" ng-if="::addressHierarchyConfigs.showAddressFieldsTopDown" strict-autocomplete-from-level="::addressHierarchyConfigs.strictAutocompleteFromLevel"></section>
 
-        <legend class="registraion_legend" ng-if="patient.extraIdentifiers.length>0">
+        <!--legend class="registraion_legend" ng-if="patient.extraIdentifiers.length>0">
             <span class="mylegend">{{ ::'REGISTRATION_ADDTIONAL_IDENTIFIERS' | translate}}</span>
         </legend>
 
