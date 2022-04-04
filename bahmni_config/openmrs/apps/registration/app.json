@@ -55,7 +55,8 @@
                         "RationCard",
                         "familyIncome",
                         "debt",
-                        "cluster"
+                        "cluster",
+                        "surnameLocal"
                     ]
                 },
                 "defaults":  {
