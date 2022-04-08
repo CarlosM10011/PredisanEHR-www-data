@@ -27,7 +27,7 @@
         "config" : {
             "patientInformation": {
                 "additionalPatientInformation": {
-                    "title": "Additional Contact Information",
+                    "title": "Additional Patient Information",
                     "attributes": [
                         "Name",
                         "idNum",
@@ -94,7 +94,6 @@
             "searchByIdForwardUrl": "/patient/{{patientUuid}}",
             "showMiddleName": true,
             "showLastName": true,
-            "showSurname": true,
             "isLastNameMandatory": true,
             "showSaveConfirmDialog": false,
             "showBirthTime": true,
