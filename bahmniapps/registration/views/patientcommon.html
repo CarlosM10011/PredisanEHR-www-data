@@ -183,22 +183,99 @@
 
         <legend class="registraion_legend">
             <span class="mylegend">{{ ::'REGISTRATION_LABEL_OTHER_INFO' | translate}}</span>
+            
             <section class="form-field form-field-cellphone">
                 <article class="form-field">
                     <div class="field-attribute">
-                        <label for="cellphone">{{ ::'REGISTRATION_CELLPHONE_WHATSAPP' | translate}}</label>
+                        <label for="cellphone">{{ ::'REGISTRATION_LABEL_CELLPHONE_WHATSAPP' | translate}}</label>
                     </div>
     
                     <div class="field-value">
-                        <input id="cellphone" type="text" ng-model="patient.cellphone" title="{{ 'REGISTRATION_CELLPHONE_WHATSAPP'|translate }}" ng-change="handleUpdate()">
+                        <input id="cellphone" type="text" ng-model="patient.cellphone" title="{{ 'REGISTRATION_LABEL_CELLPHONE_WHATSAPP'|translate }}" ng-change="handleUpdate()">
                         </input>
-                        <!--<div class="selectGender">
-                            <ul>
-                                <li><a href="javascript:void(0)">Male</a></li>
-                                <li><a href="javascript:void(0)">Female</a></li>
-                                <li><a href="javascript:void(0)">Other</a></li>
-                            </ul>
-                        </div>-->
+                    </div>
+                </article>
+            </section>
+
+            <section class="form-field form-field-homephone">
+                <article class="form-field">
+                    <div class="field-attribute">
+                        <label for="homephone">{{ ::'REGISTRATION_LABEL_HOMEPHONE_OTHER' | translate}}</label>
+                    </div>
+                    <div class="field-value">
+                        <input id="homephone" type="text" ng-model="patient.homephone" title="{{ 'REGISTRATION_LABEL_HOMEPHONE_OTHER'|translate }}" ng-change="handleUpdate()"></input>
+                    </div>
+                </article>
+            </section>
+            <section class="form-field form-field-email">
+                <article class="form-field">
+                    <div class="field-attribute">
+                        <label for="email">{{ ::'REGISTRATION_LABEL_EMAIL' | translate}}</label>
+                    </div>
+                    <div class="field-value">
+                        <input id="email" type="text" ng-model="patient.email" title="{{ 'REGISTRATION_LABEL_EMAIL'|translate }}" ng-change="handleUpdate()"></input>
+                    </div>
+                </article>
+            </section>
+            <section class="form-field form-field-Facebook">
+                <article class="form-field">
+                    <div class="field-attribute">
+                        <label for="Facebook">{{ ::'REGISTRATION_LABEL_FACEBOOK' | translate}}</label>
+                    </div>
+                    <div class="field-value">
+                        <input id="Facebook" type="text" ng-model="patient.Facebook" title="{{ 'REGISTRATION_LABEL_FACEBOOK'|translate }}" ng-change="handleUpdate()"></input>
+                    </div>
+                </article>
+            </section>
+            <section class="form-field form-field-Instagram">
+                <article class="form-field">
+                    <div class="field-attribute">
+                        <label for="Instagram">{{ ::'REGISTRATION_LABEL_INSTAGRAM' | translate}}</label>
+                    </div>
+                    <div class="field-value">
+                        <input id="Instagram" type="text" ng-model="patient.Instagram" title="{{ 'REGISTRATION_LABEL_INSTAGRAM'|translate }}" ng-change="handleUpdate()"></input>
+                    </div>
+                </article>
+            </section>
+            <section class="form-field form-field-education">
+                <article class="form-field">
+                    <div class="field-attribute">
+                        <label for="education">{{ ::'REGISTRATION_LABEL_EDUCATION' | translate}}</label>
+                    </div>
+                    <div class="field-value">
+                        <input id="education" type="text" ng-model="patient.education" title="{{ 'REGISTRATION_LABEL_EDUCATION'|translate }}" ng-change="handleUpdate()"></input>
+                    </div>
+                </article>
+            </section>
+
+            <section class="form-field form-field-occupation">
+                <article class="form-field">
+                    <div class="field-attribute">
+                        <label for="occupation">{{ ::'REGISTRATION_LABEL_OCCUPATION' | translate}}</label>
+                    </div>
+                    <div class="field-value">
+                        <input id="occupation" type="text" ng-model="patient.occupation" title="{{ 'REGISTRATION_LABEL_OCCUPATION'|translate }}" ng-change="handleUpdate()"></input>
+                    </div>
+                </article>
+            </section>
+
+            <section class="form-field form-field-distance">
+                <article class="form-field">
+                    <div class="field-attribute">
+                        <label for="distance">{{ ::'REGISTRATION_LABEL_DISTANCE' | translate}}</label>
+                    </div>
+                    <div class="field-value">
+                        <input id="distance" type="text" ng-model="patient.distance" title="{{ 'REGISTRATION_LABEL_DISTANCE'|translate }}" ng-change="handleUpdate()"></input>
+                    </div>
+                </article>
+            </section>
+            <section class="form-field form-field-acres">
+                <article class="form-field">
+                    <div class="field-attribute">
+                        <label for="acres">{{ ::'REGISTRATION_LABEL_ACRES' | translate}}</label>
+                    </div>
+                    <div class="field-value">
+                        <input id="acres" type="text" ng-model="patient.acres" title="{{ 'REGISTRATION_LABEL_ACRES'|translate }}" ng-change="handleUpdate()"></input>
                     </div>
                 </article>
             </section>
@@ -210,15 +287,15 @@
                 <attribute-types target-model="patient" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
             </article>
         </section-->
+        <legend class="registraion_legend" ng-if="::addressLevels.length>0">
+            <span class="mylegend"> {{ ::'REGISTRATION_LABEL_ADDRESS_INFO' | translate}}</span>
+        </legend>
+    
+        <section address-fields data-address-levels="::addressLevels" data-address="patient.address" field-validation="::fieldValidation" strict-autocomplete-from-level="::addressHierarchyConfigs.strictAutocompleteFromLevel" ng-if="::!addressHierarchyConfigs.showAddressFieldsTopDown"></section>
+    
+        <section top-down-address-fields data-address-levels="::addressLevels" data-address="patient.address" field-validation="::fieldValidation" ng-if="::addressHierarchyConfigs.showAddressFieldsTopDown" strict-autocomplete-from-level="::addressHierarchyConfigs.strictAutocompleteFromLevel"></section>    
     </div>
-    <legend class="registraion_legend" ng-if="::addressLevels.length>0">
-        <span class="mylegend"> {{ ::'REGISTRATION_LABEL_ADDRESS_INFO' | translate}}</span>
-    </legend>
-
-    <section address-fields data-address-levels="::addressLevels" data-address="patient.address" field-validation="::fieldValidation" strict-autocomplete-from-level="::addressHierarchyConfigs.strictAutocompleteFromLevel" ng-if="::!addressHierarchyConfigs.showAddressFieldsTopDown"></section>
-
-    <section top-down-address-fields data-address-levels="::addressLevels" data-address="patient.address" field-validation="::fieldValidation" ng-if="::addressHierarchyConfigs.showAddressFieldsTopDown" strict-autocomplete-from-level="::addressHierarchyConfigs.strictAutocompleteFromLevel"></section>
-
+    
     <!--This is the area to edit additional information          v Person Attributes we place in app.json-->
     <div ng-repeat="section in ::patientConfiguration.getOrderedPatientAttributesSections()" class="additional-info-wrapper">
         <div ng-if="section.canShow">
@@ -241,18 +318,17 @@
                 </section>
             </div>
         </div>
-        <div class="box-container" ng-if="::(relationshipTypes.length > 0)">
-            <legend class="additional-attribute" ng-show="::relationshipTypes" toggle="patient.hasRelationships">
-              <span>
-                  <i class="fa fa-caret-right"></i>
-                  <i class="fa fa-caret-down"></i>
-                  <strong><a ng-bind-html="::'REGISTRATION_TITLE_RELATIONSHIPS' | translate"></a></strong>
-              </span>
-            </legend>
-            <div patient-relationship patient="patient" ng-show="patient.hasRelationships" ng-if="::relationshipTypes"></div>
-        </div>
     </div>
-
+    <div class="box-container" ng-if="::(relationshipTypes.length > 0)">
+        <legend class="additional-attribute" ng-show="::relationshipTypes" toggle="patient.hasRelationships">
+          <span>
+              <i class="fa fa-caret-right"></i>
+              <i class="fa fa-caret-down"></i>
+              <strong><a ng-bind-html="::'REGISTRATION_TITLE_RELATIONSHIPS' | translate"></a></strong>
+          </span>
+        </legend>
+        <div patient-relationship patient="patient" ng-show="patient.hasRelationships" ng-if="::relationshipTypes"></div>
+    </div>
     <!--div class="box-container" ng-if="deathConceptExists">
         <legend class="additional-attribute" toggle="patient.isDead">
           <span>
