@@ -45,8 +45,6 @@
                         "email",
                         "education",
                         "occupation",
-                        "primaryContact",
-                        "secondaryContact",
                         "acres",
                         "debt",
                         "distance",
