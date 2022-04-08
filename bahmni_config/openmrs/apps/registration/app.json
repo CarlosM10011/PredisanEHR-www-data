@@ -30,6 +30,7 @@
                     "title": "Additional Contact Information",
                     "attributes": [
                         "Name",
+                        "primaryContact",
                         "Relationship",
                         "cellphone",
                         "homephone",
