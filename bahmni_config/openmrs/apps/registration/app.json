@@ -30,11 +30,12 @@
                     "title": "Additional Contact Information",
                     "attributes": [
                         "Name",
+                        "idNum",
                         "primaryContact",
                         "Relationship",
                         "cellphone",
                         "homephone",
-                        "Email",
+                        "tempEmail",
                         "Facebook",
                         "Instagram",
                         "mailingAddr"
