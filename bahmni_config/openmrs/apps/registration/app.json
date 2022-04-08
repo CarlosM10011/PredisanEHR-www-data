@@ -41,6 +41,21 @@
                     ]
                 },
 
+                "additionalContactInformation": {
+                    "title": "Additional Contact Information",
+                    "attributes": [
+                        "Name",
+                        "idNum",
+                        "primaryContact",
+                        "Relationship",
+                        "secondaryContact",
+                        "tempEmail",
+                        "Facebook",
+                        "Instagram",
+                        "mailingAddr"
+                    ]
+                },
+
                 "hidden": {
                     "attributes": [
                         "email",
