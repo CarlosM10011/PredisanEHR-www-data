@@ -29,6 +29,14 @@
                 "additionalPatientInformation": {
                     "title": "Additional Contact Information",
                     "attributes": [
+                        "Name",
+                        "Relationship",
+                        "cellphone",
+                        "homephone",
+                        "Email",
+                        "Facebook",
+                        "Instagram",
+                        "mailingAddr"
                     ]
                 },
 
