@@ -127,14 +127,6 @@
                 <ng-include src="'views/age.html'"></ng-include>
             </div>
         </section>
-        <legend class="registraion_legend" ng-if="::addressLevels.length>0">
-            <span class="mylegend"> {{ ::'REGISTRATION_LABEL_ADDRESS_INFO' | translate}}</span>
-        </legend>
-
-        <section address-fields data-address-levels="::addressLevels" data-address="patient.address" field-validation="::fieldValidation" strict-autocomplete-from-level="::addressHierarchyConfigs.strictAutocompleteFromLevel" ng-if="::!addressHierarchyConfigs.showAddressFieldsTopDown"></section>
-
-        <section top-down-address-fields data-address-levels="::addressLevels" data-address="patient.address" field-validation="::fieldValidation" ng-if="::addressHierarchyConfigs.showAddressFieldsTopDown" strict-autocomplete-from-level="::addressHierarchyConfigs.strictAutocompleteFromLevel"></section>
-
         <!--legend class="registraion_legend" ng-if="patient.extraIdentifiers.length>0">
             <span class="mylegend">{{ ::'REGISTRATION_ADDTIONAL_IDENTIFIERS' | translate}}</span>
         </legend>
@@ -189,16 +181,46 @@
             </section>
         </section-->
 
-        <legend class="registraion_legend" ng-if="patientConfiguration.customAttributeRows().length > 0">
+        <!--legend class="registraion_legend" ng-if="patientConfiguration.customAttributeRows().length > 0"-->
+        <legend>
             <span class="mylegend">{{ ::'REGISTRATION_LABEL_OTHER_INFO' | translate}}</span>
+            <section class="form-field form-field-cellphone">
+                <article class="form-field">
+                    <div class="field-attribute">
+                        <label for="cellphone">{{ ::'REGISTRATION_CELLPHONE_WHATSAPP' | translate}}</label>
+                    </div>
+    
+                    <div class="field-value">
+                        <select id="cellphone" ng-model="patient.cellphone" title="{{ 'REGISTRATION_CELLPHONE_WHATSAPP'|translate }}" ng-change="handleUpdate()">
+                            <option value="">{{ ::'REGISTRATION_CELLPHONE_WHATSAPP' | translate}}</option>
+                        </select>
+                        <!--<div class="selectGender">
+                            <ul>
+                                <li><a href="javascript:void(0)">Male</a></li>
+                                <li><a href="javascript:void(0)">Female</a></li>
+                                <li><a href="javascript:void(0)">Other</a></li>
+                            </ul>
+                        </div>-->
+                    </div>
+                </article>
+            </section>
         </legend>
 
-        <section class="form-field-inline clearfix" ng-repeat="attributeRow in ::patientConfiguration.customAttributeRows()">
+        
+        <!--section class="form-field-inline clearfix" ng-repeat="attributeRow in ::patientConfiguration.customAttributeRows()">
             <article class="form-field" ng-repeat="attribute in ::attributeRow" ng-class="::{'right-form-field' : $index%2 != 0}">
                 <attribute-types target-model="patient" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
             </article>
-        </section>
+        </section-->
     </div>
+    <legend class="registraion_legend" ng-if="::addressLevels.length>0">
+        <span class="mylegend"> {{ ::'REGISTRATION_LABEL_ADDRESS_INFO' | translate}}</span>
+    </legend>
+
+    <section address-fields data-address-levels="::addressLevels" data-address="patient.address" field-validation="::fieldValidation" strict-autocomplete-from-level="::addressHierarchyConfigs.strictAutocompleteFromLevel" ng-if="::!addressHierarchyConfigs.showAddressFieldsTopDown"></section>
+
+    <section top-down-address-fields data-address-levels="::addressLevels" data-address="patient.address" field-validation="::fieldValidation" ng-if="::addressHierarchyConfigs.showAddressFieldsTopDown" strict-autocomplete-from-level="::addressHierarchyConfigs.strictAutocompleteFromLevel"></section>
+
     <!--This is the area to edit additional information          v Person Attributes we place in app.json-->
     <div ng-repeat="section in ::patientConfiguration.getOrderedPatientAttributesSections()" class="additional-info-wrapper">
         <div ng-if="section.canShow">
