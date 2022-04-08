@@ -181,8 +181,7 @@
             </section>
         </section-->
 
-        <!--legend class="registraion_legend" ng-if="patientConfiguration.customAttributeRows().length > 0"-->
-        <legend>
+        <legend class="registraion_legend">
             <span class="mylegend">{{ ::'REGISTRATION_LABEL_OTHER_INFO' | translate}}</span>
             <section class="form-field form-field-cellphone">
                 <article class="form-field">
@@ -191,8 +190,8 @@
                     </div>
     
                     <div class="field-value">
-                        <select id="cellphone" ng-model="patient.cellphone" title="{{ 'REGISTRATION_CELLPHONE_WHATSAPP'|translate }}" ng-change="handleUpdate()">
-                            <option value="" type="text">{{ ::'REGISTRATION_CELLPHONE_WHATSAPP' | translate}}</option>
+                        <select id="cellphone" type="text" ng-model="patient.cellphone" title="{{ 'REGISTRATION_CELLPHONE_WHATSAPP'|translate }}" ng-change="handleUpdate()">
+                            <option value="">{{ ::'REGISTRATION_CELLPHONE_WHATSAPP' | translate}}</option>
                         </select>
                         <!--<div class="selectGender">
                             <ul>
