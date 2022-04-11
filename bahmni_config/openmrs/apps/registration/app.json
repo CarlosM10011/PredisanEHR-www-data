@@ -93,12 +93,10 @@
             "searchByIdForwardUrl": "/patient/{{patientUuid}}",
             "showMiddleName": true,
             "showLastName": true,
-            "showSurname": true,
             "isLastNameMandatory": true,
             "showSaveConfirmDialog": false,
             "showBirthTime": true,
             "showCasteSameAsLastNameCheckbox": false,
-            "patientNameDisplayOrder": ["firstName", "middleName", "lastName", "surname"],
             "printOptions": [
                 {
                     "translationKey": "REGISTRATION_PRINT_REG_CARD_LOCAL_KEY",
@@ -150,7 +148,7 @@
                 "customAttributes": {
                     "label": "Patient Name",
                     "placeholder": "Patient Name",
-                    "fields": ["givenNameLocal", "middleNameLocal", "familyNameLocal", "surnameLocal"]
+                    "fields": ["givenNameLocal", "middleNameLocal", "familyNameLocal"]
                 }
             }
         }
