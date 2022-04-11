@@ -93,6 +93,7 @@
             "searchByIdForwardUrl": "/patient/{{patientUuid}}",
             "showMiddleName": true,
             "showLastName": true,
+            "showSurname": true,
             "isLastNameMandatory": true,
             "showSaveConfirmDialog": false,
             "showBirthTime": true,
