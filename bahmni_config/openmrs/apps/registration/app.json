@@ -29,15 +29,7 @@
                 "additionalPatientInformation": {
                     "title": "Additional Patient Information",
                     "attributes": [
-                        "Name",
-                        "idNum",
-                        "primaryContact",
-                        "Relationship",
-                        "secondaryContact",
-                        "tempEmail",
-                        "Facebook",
-                        "Instagram",
-                        "mailingAddr"
+                        "Name"
                     ]
                 },
 
