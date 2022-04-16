@@ -26,11 +26,37 @@
         ],
         "config" : {
             "patientInformation": {
-                "additionalPatientInformation": {
+                "responsibleSigningInformation": {
+                    "title": "Responsible Signing Information",
+                    "translationKey": "REGISTRATION_TITLE_RELATIONSHIPS",
+                    "attributes": [
+                        "Name",
+                        "idNum",
+                        "primaryContact",
+                        "Relationship",
+                        "secondaryContact",
+                        "tempEmail",
+                        "Facebook",
+                        "Instagram",
+                        "mailingAddr"
+                    ],
+                    "order": 1
+                },
+
+                "additionalContactInformation": {
                     "title": "Additional Patient Information",
                     "attributes": [
-                        "Name"
-                    ]
+                        "Name",
+                        "idNum",
+                        "primaryContact",
+                        "Relationship",
+                        "secondaryContact",
+                        "tempEmail",
+                        "Facebook",
+                        "Instagram",
+                        "mailingAddr"
+                    ],
+                    "order": 1
                 },
 
                 "hidden": {
