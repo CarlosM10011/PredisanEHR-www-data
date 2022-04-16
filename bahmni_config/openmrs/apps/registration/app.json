@@ -42,9 +42,9 @@
                     ],
                     "order": 1
                 },
-
                 "additionalContactInformation": {
-                    "title": "Additional Patient Information",
+                    "title": "Contact Information",
+                    "translationKey": "REGISTRATION_TITLE_ADDITIONAL_PATIENT",
                     "attributes": [
                         "Name",
                         "idNum",
@@ -56,7 +56,7 @@
                         "Instagram",
                         "mailingAddr"
                     ],
-                    "order": 1
+                    "order": 2
                 },
 
                 "hidden": {
