@@ -293,26 +293,4 @@
             </div>
         </div>
     </div>
-
-    <div class="box-container">
-        <legend class="additional-attribute">
-          <span>
-              <i class="fa fa-caret-right"></i>
-              <i class="fa fa-caret-down"></i>
-              <strong><a ng-bind-html="::'REGISTRATION_TITLE_ADDITIONAL_PATIENT' | translate"></a></strong>
-          </span>
-        </legend>
-        
-        <section class="form-field form-field-contact1">
-            <article class="form-field">
-                <div class="field-attribute">
-                    <label for="contact1">{{ ::'REGISTRATION_LABEL_NAME' | translate}}</label>
-                </div>
-                <div class="field-value">
-                    <input id="contact1" type="text" ng-model="patient.primaryContact" title="{{ 'REGISTRATION_LABEL_NAME'|translate }}" ng-change="handleUpdate()"></input>
-                </div>
-            </article>
-        </section>
-
-    </div>
 </div>
