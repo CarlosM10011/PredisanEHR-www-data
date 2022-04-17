@@ -164,7 +164,7 @@
         <legend class="registraion_legend">
             <span class="mylegend">{{ ::'REGISTRATION_LABEL_OTHER_INFO' | translate}}</span>
             
-            <section class="form-field">
+            <section class="form-field-inline">
                 <article class="form-field">
                     <div class="field-attribute">
                         <label for="cellphone">{{ ::'REGISTRATION_LABEL_CELL' | translate}}</label>
@@ -177,12 +177,12 @@
                 </article>
             </section>
 
-            <section class="form-field">
-                <article class="form-field">
-                    <div class="right-field-value">
+            <section class="form-field-inline">
+                <article class="right-form-field">
+                    <div class="field-value">
                         <input id="homephone" type="text" ng-model="patient.homephone" title="{{ 'REGISTRATION_LABEL_HOME'|translate }}" ng-change="handleUpdate()"></input>
                     </div>
-                    <div class="right-field-attribute">
+                    <div class="field-attribute">
                         <label for="homephone">{{ ::'REGISTRATION_LABEL_HOME' | translate}}</label>
                     </div>
                     
