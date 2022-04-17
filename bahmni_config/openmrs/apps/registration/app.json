@@ -30,7 +30,6 @@
                     "title": "Responsible Signing Information",
                     "attributes": [
                         "Name",
-                        "idNum",
                         "Relationship",
                         "cellphone",
                         "homephone",
@@ -38,8 +37,7 @@
                         "Facebook",
                         "Instagram",
                         "mailingAddr"
-                    ],
-                    "order": 1
+                    ]
                 },
 
                 "hidden": {
