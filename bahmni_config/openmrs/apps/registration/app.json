@@ -46,15 +46,7 @@
                     "title": "Contact Information",
                     "translationKey": "REGISTRATION_TITLE_ADDITIONAL_PATIENT",
                     "attributes": [
-                        "Name",
-                        "idNum",
-                        "primaryContact",
-                        "Relationship",
-                        "secondaryContact",
-                        "tempEmail",
-                        "Facebook",
-                        "Instagram",
-                        "mailingAddr"
+                        "primaryContact.Name"
                     ],
                     "order": 2
                 },
