@@ -297,18 +297,18 @@
     <div ng-repeat="section in ::patientConfiguration.getOrderedPatientAttributesSections()" class="additional-info-wrapper">
         <div ng-if="section.canShow">
             <div class="box-container form">
-                <legend class="aditional-attribute" toggle="section2.expand">
+                <legend class="aditional-attribute" toggle="section.expand">
               <span>
                   <i class="fa fa-caret-right"></i>
                   <i class="fa fa-caret-down"></i>
                   <strong>
-                      <a ng-if="::section2.translationKey" href accesskey="{{::section2.shortcutKey | translate}}" ng-bind-html="::section2.translationKey | translate">
+                      <a ng-if="::section.translationKey" href accesskey="{{::section.shortcutKey | translate}}" ng-bind-html="::section.translationKey | translate">
                       </a>
                       <a ng-if="::(section.title && !section.translationKey)" href>{{::'REGISTRATION_TITLE_RELATIONSHIPS' | translate}}</a>
                   </strong>
               </span>
                 </legend>
-                <section class="form-field-inline" ng-show="section2.expand">
+                <section class="form-field-inline" ng-show="section.expand">
                     <article class="form-field" ng-repeat="attribute in ::section2.attributes" ng-class="::{'right-form-field' : $index%2 != 0}">
                         <attribute-types target-model="patient.primaryContact" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
                     </article>
