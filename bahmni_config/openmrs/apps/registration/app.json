@@ -30,12 +30,12 @@
                     "title": "Responsible Signing Information",
                     "attributes": [
                         "Name",
-                        "Relationship",
+                        "relationship",
                         "cellphone",
                         "homephone",
                         "tempEmail",
-                        "Facebook",
-                        "Instagram",
+                        "facebook",
+                        "instagram",
                         "mailingAddr"
                     ]
                 },
