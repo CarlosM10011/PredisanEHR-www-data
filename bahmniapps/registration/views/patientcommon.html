@@ -308,7 +308,7 @@
         </div>
     </div>
 
-    <div class="box-container" ng-if="::(relationshipTypes.length > 0)">
+    <div class="box-container">
         <legend class="additional-attribute" ng-show="::relationshipTypes" toggle="patient.hasRelationships">
           <span>
               <i class="fa fa-caret-right"></i>
@@ -316,6 +316,17 @@
               <strong><a ng-bind-html="::'REGISTRATION_TITLE_ADDITIONAL_PATIENT' | translate"></a></strong>
           </span>
         </legend>
-        <div patient-relationship patient="patient" ng-show="patient.hasRelationships" ng-if="::relationshipTypes"></div>
+        
+        <section class="form-field form-field-contact1">
+            <article class="form-field">
+                <div class="field-attribute">
+                    <label for="contact1">{{ ::'REGISTRATION_LABEL_NAME' | translate}}</label>
+                </div>
+                <div class="field-value">
+                    <input id="contact1" type="text" ng-model="patient.primaryContact.Name" title="{{ 'REGISTRATION_LABEL_NAME'|translate }}" ng-change="handleUpdate()"></input>
+                </div>
+            </article>
+        </section>
+
     </div>
 </div>
