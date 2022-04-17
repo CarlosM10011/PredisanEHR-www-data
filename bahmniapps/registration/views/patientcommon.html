@@ -288,10 +288,12 @@
                 <section class="form-field-inline clearfix" ng-show="section.expand">
                     <article class="form-field">
                         <div class="field-attribute">
-                            <label for="relationship">{{ ::'REGISTRATION_TITLE_RELATIONSHIP' | translate}}</label>
+                            <label for="relationship">{{ ::'REGISTRATION_TITLE_RELATIONSHIPS' | translate}}</label>
                         </div>
                         <div class="field-value">
-                            <select id="relationship" ng-model="Person.Relationship" title="{{ 'REGISTRATION_TITLE_RELATIONSHIPS'|translate }}" ng-options="RelationshipTypeMap[relationshipCode] for relationshipCode in relationshipCodes track by relationshipCode" ng-change="handleUpdate('relationship')"></input>
+                            <select id="relationship" ng-model="Person.Relationship" title="{{ 'REGISTRATION_TITLE_RELATIONSHIPS'|translate }}" ng-options="RelationshipTypeMap[relationshipCode] for relationshipCode in relationshipCodes track by relationshipCode" ng-change="handleUpdate('relationship')">
+                                <option value="">{{ ::'REGISTRATION_TITLE_RELATIONSHIPS' | translate}}</option>
+                            </select>
                         </div>
                     </article>
                     <article class="form-field" ng-repeat="attribute in ::section.attributes" ng-class="::{'right-form-field' : $index%2 != 0}">
