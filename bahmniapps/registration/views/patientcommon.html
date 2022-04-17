@@ -294,13 +294,13 @@
         </div>
     </div>
     
-    <div ng-repeat="section2 in ::patientConfiguration.getOrderedPatientAttributesSections()" class="additional-info-wrapper">
-        <!--div ng-if="section2.canShow"-->
-            <div class="box-container form2" ng-if="::(section2.attributes.length > 0 && section2.title)">
+    <div ng-repeat="section in ::patientConfiguration.getOrderedPatientAttributesSections()" class="additional-info-wrapper">
+        <div ng-if="section.canShow">
+            <div class="box-container form">
                 <legend class="aditional-attribute" toggle="section2.expand">
               <span>
-                  <!--i class="fa fa-caret-right"></i>
-                  <i class="fa fa-caret-down"></i-->
+                  <i class="fa fa-caret-right"></i>
+                  <i class="fa fa-caret-down"></i>
                   <strong>
                       <a ng-if="::section2.translationKey" href accesskey="{{::section2.shortcutKey | translate}}" ng-bind-html="::section2.translationKey | translate">
                       </a>
