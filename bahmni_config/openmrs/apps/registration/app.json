@@ -26,19 +26,8 @@
         ],
         "config" : {
             "patientInformation": {
-                
-                "additionalContactInformation": {
-                        "title": "Contact Information",
-                        "translationKey": "REGISTRATION_TITLE_ADDITIONAL_PATIENT",
-                        "attributes": [
-                            "primaryContactName",
-                            "Name"
-                        ],
-                    "order": 2
-                },
                 "responsibleSigningInformation": {
                     "title": "Responsible Signing Information",
-                    "translationKey": "REGISTRATION_TITLE_RELATIONSHIPS",
                     "attributes": [
                         "Name",
                         "idNum",
