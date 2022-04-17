@@ -42,6 +42,7 @@
                 "hidden": {
                     "attributes": [
                         "email",
+                        "Relationship",
                         "education",
                         "occupation",
                         "acres",
