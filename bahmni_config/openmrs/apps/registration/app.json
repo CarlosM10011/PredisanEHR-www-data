@@ -46,7 +46,8 @@
                     "title": "Contact Information",
                     "translationKey": "REGISTRATION_TITLE_ADDITIONAL_PATIENT",
                     "attributes": [
-                        "primaryContact.Name"
+                        "primaryContact.Name",
+                        "primaryContact.cellphone"
                     ],
                     "order": 1
                 },
