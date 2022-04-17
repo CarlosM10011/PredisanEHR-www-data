@@ -291,7 +291,7 @@
                             <label for="relationship">{{ ::'REGISTRATION_TITLE_RELATIONSHIP' | translate}}</label>
                         </div>
                         <div class="field-value">
-                            <input id="relationship" ng-model="patient.Relationship" title="{{ 'REGISTRATION_TITLE_RELATIONSHIPS'|translate }}" ng-change="handleUpdate()"></input>
+                            <input id="relationship" type="range" ng-model="patient.Relationship" title="{{ 'REGISTRATION_TITLE_RELATIONSHIPS'|translate }}" ng-change="handleUpdate()"></input>
                         </div>
                     </article>
                     <article class="form-field" ng-repeat="attribute in ::section.attributes" ng-class="::{'right-form-field' : $index%2 != 0}">
