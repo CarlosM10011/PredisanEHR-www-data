@@ -296,7 +296,7 @@
     
     <div ng-repeat="section in ::patientConfiguration.getOrderedPatientAttributesSections()" class="additional-info-wrapper">
         <div ng-if="section.canShow">
-            <div class="box-container form">
+            <div class="box-container" ng-if="::(section.attributes.length > 0 && section.title)">
                 <legend class="aditional-attribute" toggle="section.expand">
               <span>
                   <i class="fa fa-caret-right"></i>
@@ -309,7 +309,7 @@
               </span>
                 </legend>
                 <section class="form-field-inline" ng-show="section.expand">
-                    <article class="form-field" ng-repeat="attribute in ::section2.attributes" ng-class="::{'right-form-field' : $index%2 != 0}">
+                    <article class="form-field" ng-repeat="attribute in ::section.attributes" ng-class="::{'right-form-field' : $index%2 != 0}">
                         <attribute-types target-model="patient.primaryContact" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
                     </article>
                 </section>
