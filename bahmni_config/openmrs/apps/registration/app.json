@@ -30,7 +30,7 @@
                     "title": "Responsible Signing Information",
                     "attributes": [
                         "Name",
-                        "relation",
+                        "later",
                         "cellphone",
                         "homephone",
                         "tempEmail",
