@@ -291,7 +291,7 @@
                             <label for="relationship">{{ ::'REGISTRATION_TITLE_RELATIONSHIPS' | translate}}</label>
                         </div>
                         <div class="field-value">
-                            <select id="relationship" ng-model="Person.Relationship" title="{{ 'REGISTRATION_TITLE_RELATIONSHIPS'|translate }}" ng-options="RelationshipTypeMap[relationshipCode] for relationshipCode in relationshipCodes track by relationshipCode" ng-change="handleUpdate('relationship')">
+                            <select id="relationship" ng-model="Person.Relationship" title="{{ 'REGISTRATION_TITLE_RELATIONSHIPS'|translate }}" ng-options="relationships in patient.Relationship" ng-change="handleUpdate('relationship')">
                                 <option value="">{{ ::'REGISTRATION_TITLE_RELATIONSHIPS' | translate}}</option>
                             </select>
                         </div>
