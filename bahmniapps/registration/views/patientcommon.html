@@ -286,6 +286,12 @@
               </span>
                 </legend>
                 <section class="form-field-inline clearfix" ng-show="section.expand">
+                    <div class="field-attribute">
+                        <label for="relationship">{{ ::'REGISTRATION_LABEL_ACRES' | translate}}</label>
+                    </div>
+                    <div class="field-value">
+                        <input id="relationship" type="text" ng-model="patient.Relationship" title="{{ 'REGISTRATION_TITLE_RELATIONSHIPS'|translate }}" ng-change="handleUpdate()"></input>
+                    </div>
                     <article class="form-field" ng-repeat="attribute in ::section.attributes" ng-class="::{'right-form-field' : $index%2 != 0}">
                         <attribute-types target-model="patient.responsibleSigning" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
                     </article>
