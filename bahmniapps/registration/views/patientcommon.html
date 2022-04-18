@@ -171,7 +171,7 @@
                     </div>
     
                     <div class="field-value">
-                        <input id="cellphone" type="text" ng-model="patient.cellphone" title="{{ 'REGISTRATION_LABEL_CELL'|translate }}" ng-change="handleUpdate()">
+                        <input id="cellphone" type="text" ng-model="$parent.cellphone" title="{{ 'REGISTRATION_LABEL_CELL'|translate }}" ng-change="handleUpdate()">
                         </input>
                     </div>
                 </article>
@@ -180,7 +180,7 @@
                         <label for="homephone">{{ ::'REGISTRATION_LABEL_HOME' | translate}}</label>
                     </div>  
                     <div class="field-value">
-                        <input id="homephone" type="text" ng-model="patient.homephone" title="{{ 'REGISTRATION_LABEL_HOME'|translate }}" ng-change="handleUpdate()"></input>
+                        <input id="homephone" type="text" ng-model="$parent.homephone" title="{{ 'REGISTRATION_LABEL_HOME'|translate }}" ng-change="handleUpdate()"></input>
                     </div>                 
                 </article>
             </section>
@@ -192,7 +192,7 @@
                         <label for="email">{{ ::'REGISTRATION_LABEL_EMAIL' | translate}}</label>
                     </div>
                     <div class="field-value">
-                        <input id="email" type="text" ng-model="patient.email" title="{{ 'REGISTRATION_LABEL_EMAIL'|translate }}" ng-change="handleUpdate()"></input>
+                        <input id="email" type="text" ng-model="$parent.email" title="{{ 'REGISTRATION_LABEL_EMAIL'|translate }}" ng-change="handleUpdate()"></input>
                     </div>
                 </article>
                 <article class="form-field">
@@ -200,7 +200,7 @@
                         <label for="Facebook">{{ ::'REGISTRATION_LABEL_FACEBK' | translate}}</label>
                     </div>
                     <div class="field-value">
-                        <input id="Facebook" type="text" ng-model="patient.facebook" title="{{ 'REGISTRATION_LABEL_FACEBK'|translate }}" ng-change="handleUpdate()"></input>
+                        <input id="Facebook" type="text" ng-model="$parent.facebook" title="{{ 'REGISTRATION_LABEL_FACEBK'|translate }}" ng-change="handleUpdate()"></input>
                     </div>
                 </article>
             </section>
@@ -211,7 +211,7 @@
                         <label for="Instagram">{{ ::'REGISTRATION_LABEL_INSTGRM' | translate}}</label>
                     </div>
                     <div class="field-value">
-                        <input id="Instagram" type="text" ng-model="patient.instagram" title="{{ 'REGISTRATION_LABEL_INSTAGRAM'|translate }}" ng-change="handleUpdate()"></input>
+                        <input id="Instagram" type="text" ng-model="$parent.instagram" title="{{ 'REGISTRATION_LABEL_INSTAGRAM'|translate }}" ng-change="handleUpdate()"></input>
                     </div>
                 </article>
                 <article class="form-field">
@@ -230,7 +230,7 @@
                         <label for="occupation">{{ ::'REGISTRATION_LABEL_OCCUPATION' | translate}}</label>
                     </div>
                     <div class="field-value">
-                        <select id="occupation" ng-model="patient.occupation" title="{{ 'REGISTRATION_LABEL_OCCUPATION'|translate }}" ng-change="handleUpdate()"></input>
+                        <select id="occupation" ng-model="$parent.occupation" title="{{ 'REGISTRATION_LABEL_OCCUPATION'|translate }}" ng-change="handleUpdate()"></input>
                     </div>
                 </article>
                 <article class="form-field">
@@ -249,7 +249,7 @@
                         <label for="acres">{{ ::'REGISTRATION_LABEL_ACRES' | translate}}</label>
                     </div>
                     <div class="field-value">
-                        <input id="acres" type="text" ng-model="patient.acres" title="{{ 'REGISTRATION_LABEL_ACRES'|translate }}" ng-change="handleUpdate()"></input>
+                        <input id="acres" type="text" ng-model="$parent.acres" title="{{ 'REGISTRATION_LABEL_ACRES'|translate }}" ng-change="handleUpdate()"></input>
                     </div>
                 </article>
             </section>
@@ -261,7 +261,7 @@
                 </div>
                 
                  <div class="field-value">
-                    <select id="relationship" ng-model="patient.Relationship" title="{{ 'REGISTRATION_TITLE_RELATIONSHIPS'|translate }}" ng-options="name for relationship in RelationshipType">
+                    <select id="relationship" ng-model="$parent.Relationship" title="{{ 'REGISTRATION_TITLE_RELATIONSHIPS'|translate }}" ng-options="name for relationship in RelationshipType">
                         <option value="">{{ ::'REGISTRATION_TITLE_RELATIONSHIPS' | translate}}</option>
                     </select>
                 </div>
@@ -300,7 +300,7 @@
                 </legend>
                 <section class="form-field-inline clearfix" ng-show="section.expand">
                     <article class="form-field" ng-repeat="attribute in ::section.attributes" ng-class="::{'right-form-field' : $index%2 != 0}">
-                        <attribute-types target-model="patient.responsibleSigning" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
+                        <attribute-types target-model="$parent.responsibleSigning" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
                     </article>
                 </section>
             </div>
@@ -323,7 +323,7 @@
                 </legend>
                 <section class="form-field-inline" ng-show="section2.expand">
                     <article class="form-field" ng-repeat="attribute in ::section.attributes" ng-class="::{'right-form-field' : $index%2 != 0}">
-                        <attribute-types target-model="patient.primaryContact" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
+                        <attribute-types target-model="$parent.primaryContact" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
                     </article>
                 </section>
             </div>
@@ -346,7 +346,7 @@
                 </legend>
                 <section class="form-field-inline clearfix" ng-show="section3.expand">
                     <article class="form-field" ng-repeat="attribute in ::section.attributes" ng-class="::{'right-form-field' : $index%2 != 0}">
-                        <attribute-types target-model="patient.secondaryContact" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
+                        <attribute-types target-model="$parent.secondaryContact" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
                     </article>
                 </section>
             </div>
