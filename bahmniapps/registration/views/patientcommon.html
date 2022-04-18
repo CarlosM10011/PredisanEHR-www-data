@@ -220,6 +220,7 @@
                     </div>
                     <div class="field-value">
                         <select id="education" ng-model="patient.education" ng-options="concept.name as concept.name for concept in patient.education " ng-change="handleUpdate('education')"></input>
+                            <option value="">Choose Education Level</option>
                     </div>
                 </article>
             </section>
