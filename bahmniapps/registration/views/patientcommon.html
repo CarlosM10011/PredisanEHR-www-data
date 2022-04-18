@@ -180,7 +180,7 @@
                         <label for="homephone">{{ ::'REGISTRATION_LABEL_HOME' | translate}}</label>
                     </div>  
                     <div class="field-value">
-                        <input id="homephone" type="text" ng-model="this.homephone" title="{{ 'REGISTRATION_LABEL_HOME'|translate }}" ng-change="handleUpdate()"></input>
+                        <input id="homephone" type="text" ng-model="patient.homephone" title="{{ 'REGISTRATION_LABEL_HOME'|translate }}" ng-change="handleUpdate()"></input>
                     </div>                 
                 </article>
             </section>
@@ -192,7 +192,7 @@
                         <label for="email">{{ ::'REGISTRATION_LABEL_EMAIL' | translate}}</label>
                     </div>
                     <div class="field-value">
-                        <input id="email" type="text" ng-model="this.email" title="{{ 'REGISTRATION_LABEL_EMAIL'|translate }}" ng-change="handleUpdate()"></input>
+                        <input id="email" type="text" ng-model="patient.email" title="{{ 'REGISTRATION_LABEL_EMAIL'|translate }}" ng-change="handleUpdate()"></input>
                     </div>
                 </article>
                 <article class="form-field">
@@ -200,7 +200,7 @@
                         <label for="Facebook">{{ ::'REGISTRATION_LABEL_FACEBK' | translate}}</label>
                     </div>
                     <div class="field-value">
-                        <input id="Facebook" type="text" ng-model="this.facebook" title="{{ 'REGISTRATION_LABEL_FACEBK'|translate }}" ng-change="handleUpdate()"></input>
+                        <input id="Facebook" type="text" ng-model="patient.facebook" title="{{ 'REGISTRATION_LABEL_FACEBK'|translate }}" ng-change="handleUpdate()"></input>
                     </div>
                 </article>
             </section>
@@ -211,7 +211,7 @@
                         <label for="Instagram">{{ ::'REGISTRATION_LABEL_INSTGRM' | translate}}</label>
                     </div>
                     <div class="field-value">
-                        <input id="Instagram" type="text" ng-model="$parent.instagram" title="{{ 'REGISTRATION_LABEL_INSTAGRAM'|translate }}" ng-change="handleUpdate()"></input>
+                        <input id="Instagram" type="text" ng-model="patient.instagram" title="{{ 'REGISTRATION_LABEL_INSTAGRAM'|translate }}" ng-change="handleUpdate()"></input>
                     </div>
                 </article>
                 <article class="form-field">
