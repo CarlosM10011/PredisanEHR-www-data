@@ -219,8 +219,8 @@
                         <label for="education">{{ ::'REGISTRATION_LABEL_EDUCATION' | translate}}</label>
                     </div>
                     <div class="field-value">
-                        <select id="education" ng-model="patient.education" ng-options="concept.name as concept.name for concept in patient.education " ng-change="handleUpdate('education')"></input>
-                            <option value="">Choose Education Level</option>
+                        <select id="education" ng-model="patient.education" ng-options="concept as concept for concept in patient.education " ng-change="handleUpdate()"></input>
+                            <option value=""></option>
                     </div>
                 </article>
             </section>
