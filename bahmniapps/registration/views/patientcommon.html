@@ -230,7 +230,7 @@
                         <label for="occupation">{{ ::'REGISTRATION_LABEL_OCCUPATION' | translate}}</label>
                     </div>
                     <div class="field-value">
-                        <input id="occupation" type="text" ng-model="patient.occupation" title="{{ 'REGISTRATION_LABEL_OCCUPATION'|translate }}" ng-change="handleUpdate()"></input>
+                        <select id="occupation" ng-model="patient.occupation" title="{{ 'REGISTRATION_LABEL_OCCUPATION'|translate }}" ng-change="handleUpdate()"></input>
                     </div>
                 </article>
                 <article class="form-field">
@@ -269,11 +269,11 @@
             </article>
         </section>
         
-        <!--section class="form-field-inline clearfix" ng-repeat="attributeRow in ::patientConfiguration.customAttributeRows()">
+        <section class="form-field-inline clearfix" ng-repeat="attributeRow in ::patientConfiguration.customAttributeRows()">
             <article class="form-field" ng-repeat="attribute in ::attributeRow" ng-class="::{'right-form-field' : $index%2 != 0}">
                 <attribute-types target-model="patient" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
             </article>
-        </section-->
+        </section>
         <legend class="registraion_legend" ng-if="::addressLevels.length>0">
             <span class="mylegend"> {{ ::'REGISTRATION_LABEL_ADDRESS_INFO' | translate}}</span>
         </legend>
