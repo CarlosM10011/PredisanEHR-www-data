@@ -253,19 +253,20 @@
                     </div>
                 </article>
             </section>
+        </section>
 
-            <section class="form-field form-field-admission-type">
+        <section class="form-field form-field-admission-type">
             <article class="form-field">
                 <div class="field-attribute">
                     <label for="relationship">{{ :: 'REGISTRATION_TITLE_RELATIONSHIPS' | translate}} <span class="asterick">*</span></label>
                 </div>
-                
-                 <div class="field-value">
+            
+                <div class="field-value">
                     <select id="relationship" ng-model="$parent.Relationship" title="{{ 'REGISTRATION_TITLE_RELATIONSHIPS'|translate }}" ng-options="name for relationship in RelationshipType">
                         <option value="">{{ ::'REGISTRATION_TITLE_RELATIONSHIPS' | translate}}</option>
                     </select>
                 </div>
-                
+            
             </article>
         </section>
         
