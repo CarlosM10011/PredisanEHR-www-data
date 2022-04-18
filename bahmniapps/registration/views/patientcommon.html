@@ -219,7 +219,7 @@
                         <label for="education">{{ ::'REGISTRATION_LABEL_EDUCATION' | translate}}</label>
                     </div>
                     <div class="field-value">
-                        <select id="education" ng-model="patient.education" ng-options="item as item for item in patient.education " ng-change="handleUpdate('education')"></input>
+                        <select id="education" ng-model="patient.education" ng-options="a.conceptId as a.description for a in ::patient.education" ng-change="handleUpdate('education')"></input>
                             <option value=""></option>
                     </div>
                 </article>
