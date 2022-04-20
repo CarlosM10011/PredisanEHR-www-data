@@ -218,7 +218,7 @@
                     <div class="field-attribute">
                         <label for="education">{{ ::'REGISTRATION_LABEL_EDUCATION' | translate}}</label>
                     </div>
-                    <concept-dropdown on-change="update" ng-disabled="registration.disabled" model="registration.primaryObs.value" answers-concept-name="::registration.conceptUIConfig.answersConceptName" default-concept="registration.primaryObs.concept" on-invalid-class="'illegalValue'" is-valid="registration.isValid(atLeastOneValueIsSet,conceptSetRequired)"></concept-dropdown>
+                    <concept-dropdown ng-model="patient.education" ng-change="handleUpdate"></concept-dropdown>
                 </article>
             </section>
 
