@@ -218,9 +218,7 @@
                     <div class="field-attribute">
                         <label for="education">{{ ::'REGISTRATION_LABEL_EDUCATION' | translate}}</label>
                     </div>
-                    <select ng-options="answer as answer.name for answer in ::answers" ng-change="onChange(selectedAnswer)" ng-disabled="ngDisabled" ng-class="{{
-                        '{' + onInvalidClass + ' : ' + '!isValid' + '}'
-                        }}" ng-model="selectedAnswer">
+                    <select ng-options="answer as answer.name for answer in ::patient.education" ng-change="onChange(selectedAnswer)" ng-disabled="ngDisabled" ng-model="patient.education">
                     <option value="">{{ 'CHOOSE_ANSWER_FROM_DROPDOWN_LABEL'|translate }}</option>
                 </select>
                 </article>
