@@ -218,11 +218,11 @@
                     <div class="field-attribute">
                         <label for="education">{{ ::'REGISTRATION_LABEL_EDUCATION' | translate}}</label>
                     </div>
-                    <div class="field-value">
-                        <select id="education" ng-model="targetModel[patient.education]" ng-options="a as a.name for a in education" ng-disabled="::isReadOnly()" ng-blur="::handleUpdate()">
-                            <option value=""></option>
-                        </select>
-                    </div>
+                    <select ng-options="answer as answer.name for answer in ::answers" ng-change="onChange(selectedAnswer)" ng-disabled="ngDisabled" ng-class="{{
+                        '{' + onInvalidClass + ' : ' + '!isValid' + '}'
+                        }}" ng-model="selectedAnswer">
+                    <option value="">{{ 'CHOOSE_ANSWER_FROM_DROPDOWN_LABEL'|translate }}</option>
+                </select>
                 </article>
             </section>
 
@@ -251,7 +251,7 @@
                         <label for="acres">{{ ::'REGISTRATION_LABEL_ACRES' | translate}}</label>
                     </div>
                     <div class="field-value">
-                        <input id="acres" type="text" ng-model="$parent.acres" title="{{ 'REGISTRATION_LABEL_ACRES'|translate }}" ng-change="handleUpdate()"></input>
+                        <input id="acres" type="text" ng-model="patient.acres" title="{{ 'REGISTRATION_LABEL_ACRES'|translate }}" ng-change="handleUpdate()"></input>
                     </div>
                 </article>
             </section>
