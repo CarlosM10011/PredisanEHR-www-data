@@ -221,7 +221,9 @@
                     <select ng-options="education in patient.education" ng-change="onChange(education)" ng-model="education">
                         <option value="">{{ 'CHOOSE_ANSWER_FROM_DROPDOWN_LABEL'|translate }}</option>
                     </select>
-                    <!--concept-dropdown ng-model="patient.education" ng-change="handleUpdate"></concept-dropdown-->
+                    <article class="form-field" ng-repeat="attribute in ::patientConfiguration.get(c1f4a004-3f10-11e4-adec-0800271c1b75)" ng-class="::{'right-form-field' : $index%2 != 0}">
+                        <attribute-types target-model="patient" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
+                    </article>
                 </article>
             </section>
 
