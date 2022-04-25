@@ -211,7 +211,7 @@
                         <label for="Instagram">{{ ::'REGISTRATION_LABEL_INSTGRM' | translate}}</label>
                     </div>
                     <div class="field-value">
-                        <input id="Instagram" type="text" ng-model="patient.instagram" title="{{ 'REGISTRATION_LABEL_INSTAGRAM'|translate }}" ng-change="handleUpdate()"></input>
+                        <input id="Instagram" type="text" ng-model="instagram" title="{{ 'REGISTRATION_LABEL_INSTAGRAM'|translate }}" ng-change="handleUpdate()"></input>
                     </div>
                 </article>
                 <article class="form-field">
@@ -219,7 +219,7 @@
                         <label for="education">{{ ::'REGISTRATION_LABEL_EDUCATION' | translate}}</label>
                     </div>
                     <div>
-                        <select id="education" ng-model="patient.education" ng-options="rows.name for rows in ::patient.education"></select>
+                        <select id="education" ng-model="patient.education" ng-options="rows.name for rows in ::patientConfiguration"></select>
                             <option value="">
                             </option>
                     </div>
