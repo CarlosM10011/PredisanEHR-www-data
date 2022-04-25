@@ -26,6 +26,18 @@
         ],
         "config" : {
             "patientInformation": {
+                "patientGeneralData": {
+                    "title": "General Data",
+                    "attributes": [
+                        "cellphone",
+                        "homephone",
+                        "tempEmail",
+                        "facebook",
+                        "instagram"
+                    ],
+                    "order": 1
+
+                },
                 "responsibleSigningInformation": {
                     "title": "Responsible Signing Information",
                     "attributes": [
@@ -36,7 +48,8 @@
                         "facebook",
                         "instagram",
                         "mailingAddr"
-                    ]
+                    ],
+                    "order" : 2
                 },
 
                 "hidden": {
