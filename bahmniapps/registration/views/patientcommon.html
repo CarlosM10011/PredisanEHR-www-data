@@ -222,7 +222,7 @@
                         <option value="">{{ 'CHOOSE_ANSWER_FROM_DROPDOWN_LABEL'|translate }}</option>
                     </select-->
                     <div class="left">
-                        <select id="education" ng-model="patient.education" ng-options="education in targetModel[patient.education]" ng-disabled="::isReadOnly(education)" ng-blur="::handleUpdate(education)">
+                        <select id="education" ng-model="patient.education" ng-options="edu.name for edu in targetModel[patient.education]" ng-disabled="::isReadOnly(education)" ng-blur="::handleUpdate(education)">
                             <option value=""></option>
                         </select>
                     </div>
