@@ -35,7 +35,8 @@
                         "tempEmail",
                         "facebook",
                         "instagram",
-                        "mailingAddr"
+                        "mailingAddr",
+                        "responsibleSigning.Name"
                     ]
                 },
 
