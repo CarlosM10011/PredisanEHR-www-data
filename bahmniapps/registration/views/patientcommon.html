@@ -211,7 +211,7 @@
                         <label for="Instagram">{{ ::'REGISTRATION_LABEL_INSTGRM' | translate}}</label>
                     </div>
                     <div class="field-value">
-                        <input id="Instagram" type="text" ng-model="instagram" title="{{ 'REGISTRATION_LABEL_INSTAGRAM'|translate }}" ng-change="handleUpdate()"></input>
+                        <input id="Instagram" type="text" ng-model="patient.instagram" title="{{ 'REGISTRATION_LABEL_INSTAGRAM'|translate }}" ng-change="handleUpdate()"></input>
                     </div>
                 </article>
                 <article class="form-field">
@@ -349,7 +349,7 @@
                 </legend>
                 <section class="form-field-inline clearfix" ng-show="section3.expand">
                     <article class="form-field" ng-repeat="attribute in ::section.attributes" ng-class="::{'right-form-field' : $index%2 != 0}">
-                        <attribute-types target-model="$scope.patient.secondaryContact" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
+                        <attribute-types target-model="::patient.secondaryContact" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
                     </article>
                 </section>
             </div>
