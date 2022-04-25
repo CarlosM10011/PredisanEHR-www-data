@@ -221,8 +221,8 @@
                     <!--select ng-options="education in patient.education" ng-change="onChange(education)" ng-model="education">
                         <option value="">{{ 'CHOOSE_ANSWER_FROM_DROPDOWN_LABEL'|translate }}</option>
                     </select-->
-                    <div class="left" data-ng-switch-when="org.bahmni.module.bahmnicore.customdatatype.datatype.CodedConceptDatatype">
-                        <select id="{{::education}}" ng-model="targetModel[education]" ng-options="a.conceptId as a.description for a in ::education.answers" ng-disabled="::isReadOnly(education)" ng-required="{{::attribute.required}}" ng-blur="::handleUpdate(education)">
+                    <div class="left">
+                        <select id="education" ng-model="targetModel[education]" ng-options="a.conceptId as a.description for a in ::attribute.answers" ng-disabled="::isReadOnly(education)" ng-required="{{::attribute.required}}" ng-blur="::handleUpdate(education)">
                             <option value=""></option>
                         </select>
                     </div>
