@@ -221,8 +221,8 @@
                     <!--select ng-options="education in patient.education" ng-change="onChange(education)" ng-model="education">
                         <option value="">{{ 'CHOOSE_ANSWER_FROM_DROPDOWN_LABEL'|translate }}</option>
                     </select-->
-                    <article class="form-field" ng-repeat="attributeRow in ::patientConfiguration.splitAsRows(patient.education)" ng-class="::{'right-form-field' : $index%2 != 0}">
-                        <attribute-types target-model="patient.education" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
+                    <article class="form-field" ng-class="::{'right-form-field' : $index%2 != 0}">
+                        <attribute-types target-model="patient" attribute="education" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
                     </article>
                 </article>
             </section>
