@@ -26,18 +26,6 @@
         ],
         "config" : {
             "patientInformation": {
-                "patientGeneralData": {
-                    "title": "General Data",
-                    "attributes": [
-                        "cellphone",
-                        "homephone",
-                        "tempEmail",
-                        "facebook",
-                        "instagram"
-                    ],
-                    "order": 2
-
-                },
                 "responsibleSigningInformation": {
                     "title": "Responsible Signing Information",
                     "attributes": [
@@ -50,16 +38,29 @@
                         "mailingAddr",
                         "education"
                     ],
-                    "order" : 1
+                    "order" : 2
+                },
+                
+                "otherInformation": {
+                    "title": "Other Information",
+                    "attributes": [
+                        "cellphone",
+                        "homephone",
+                        "tempEmail",
+                        "facebook",
+                        "instagram",
+                        "education",
+                        "occupation",
+                        "distance",
+                        "acres"
+                    ],
+                    "order": 1
                 },
 
                 "hidden": {
                     "attributes": [
                         "email",
-                        "occupation",
-                        "acres",
                         "debt",
-                        "distance",
                         "isUrban",
                         "cluster",
                         "RationCard",
