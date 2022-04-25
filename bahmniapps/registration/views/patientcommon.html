@@ -298,7 +298,7 @@
                 </legend>
                 <section class="form-field-inline clearfix" ng-show="section.expand">
                     <article class="form-field" ng-repeat="attribute in ::section.attributes" ng-class="::{'right-form-field' : $index%2 != 0}">
-                        <attribute-types target-model="responsibleSigning" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
+                        <attribute-types target-model="::patient.responsibleSigning" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
                     </article>
                 </section>
             </div>
@@ -307,7 +307,7 @@
     
     <div ng-repeat="section in ::patientConfiguration.getOrderedPatientAttributesSections()" class="otherInfoContainer">
         <div ng-if="section.canShow">
-            <div class="box-container form2" ng-if="::(section.attributes.length > 0 && section.title)">
+            <div class="box-container form" ng-if="::(section.attributes.length > 0 && section.title)">
                 <legend class="additional-attribute" toggle="section2.expand">
               <span>
                   <i class="fa fa-caret-right"></i>
@@ -330,7 +330,7 @@
 
     <div ng-repeat="section in ::patientConfiguration.getOrderedPatientAttributesSections()" class="otherInfoContainer">
         <div ng-if="section.canShow">
-            <div class="box-container form2" ng-if="::(section.attributes.length > 0 && section.title)">
+            <div class="box-container form" ng-if="::(section.attributes.length > 0 && section.title)">
                 <legend class="additional-attribute" toggle="section3.expand">
               <span>
                   <i class="fa fa-caret-right"></i>
