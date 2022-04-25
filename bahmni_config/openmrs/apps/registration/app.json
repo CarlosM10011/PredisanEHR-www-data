@@ -35,7 +35,7 @@
                         "facebook",
                         "instagram"
                     ],
-                    "order": 1
+                    "order": 2
 
                 },
                 "responsibleSigningInformation": {
@@ -49,7 +49,7 @@
                         "instagram",
                         "mailingAddr"
                     ],
-                    "order" : 2
+                    "order" : 1
                 },
 
                 "hidden": {
