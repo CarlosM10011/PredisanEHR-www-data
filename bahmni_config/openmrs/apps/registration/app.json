@@ -36,7 +36,8 @@
                         "facebook",
                         "instagram",
                         "mailingAddr",
-                        "education"
+                        "education",
+                        ".primaryContact.Name"
                     ],
                     "order" : 2
                 },
