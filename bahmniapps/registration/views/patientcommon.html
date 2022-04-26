@@ -293,12 +293,14 @@
                       <a ng-if="::section.translationKey" href accesskey="{{::section.shortcutKey | translate}}" ng-bind-html="::section.translationKey | translate">
                       </a>
                       <a ng-if="::(section.title && !section.translationKey)" href>{{::'REGISTRATION_TITLE_RELATIONSHIPS' | translate}}</a>
+                      <a ng-if="::(section.attributeTarget)" target-model="{{::section.attributeTarget}}"></a>
+                      <a ng-if="::(!section.attributeTarget)" target-model="patient"></a>
                   </strong>
               </span>
                 </legend>
                 <section class="form-field-inline clearfix" ng-show="section.expand">
                     <article class="form-field" ng-repeat="attribute in ::section.attributes" ng-class="::{'right-form-field' : $index%2 != 0}">
-                        <attribute-types target-model="::{{patient.responsibleSigning}}" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
+                        <attribute-types attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
                     </article>
                 </section>
             </div>

@@ -28,6 +28,7 @@
             "patientInformation": {
                 "responsibleSigningInformation": {
                     "title": "Responsible Signing Information",
+                    "attributeTarget": "primaryContact",
                     "attributes": [
                         "Name",
                         "cellphone",
@@ -36,8 +37,7 @@
                         "facebook",
                         "instagram",
                         "mailingAddr",
-                        "education",
-                        ".primaryContact.Name"
+                        "education"
                     ],
                     "order" : 2
                 },
