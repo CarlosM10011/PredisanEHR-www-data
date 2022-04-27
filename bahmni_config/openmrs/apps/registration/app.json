@@ -26,22 +26,6 @@
         ],
         "config" : {
             "patientInformation": {
-                "responsibleSigningInformation": {
-                    "title": "Responsible Signing Information",
-                    "attributeTarget": "primaryContact",
-                    "attributes": [
-                        "Name",
-                        "cellphone",
-                        "homephone",
-                        "tempEmail",
-                        "facebook",
-                        "instagram",
-                        "mailingAddr",
-                        "education"
-                    ],
-                    "order" : 2
-                },
-                
                 "otherInformation": {
                     "title": "Other Information",
                     "attributes": [
