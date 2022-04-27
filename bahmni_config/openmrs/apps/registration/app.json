@@ -30,8 +30,8 @@
                     "title": "Responsible Signing Information",
                     "attributeTarget": "primaryContact",
                     "attributes": [
-                        "Name",
-                        "cellphone",
+                        "secondaryContact.Name",
+                        "secondaryContact.cellphone",
                         "homephone",
                         "tempEmail",
                         "facebook",
