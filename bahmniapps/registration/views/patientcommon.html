@@ -321,7 +321,7 @@
                 </legend>
                 <section class="form-field-inline" ng-show="section2.expand">
                     <article class="form-field" ng-repeat="attribute in ::section.attributes" ng-class="::{'right-form-field' : $index%2 != 0}">
-                        <attribute-types target-model="$scope" attribute="attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
+                        <attribute-types target-model="patient" attribute="attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
                     </article>
                 </section>
             </div>
@@ -344,7 +344,7 @@
                 </legend>
                 <section class="form-field-inline clearfix" ng-show="section3.expand">
                     <article class="form-field" ng-repeat="attribute in ::section.attributes" ng-class="::{'right-form-field' : $index%2 != 0}">
-                        <attribute-types target-model="::secondaryContact" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
+                        <attribute-types target-model="patient" attribute="::attribute" field-validation="::fieldValidation" is-auto-complete="isAutoComplete" get-auto-complete-list="getAutoCompleteList" get-data-results="getDataResults" is-read-only="isReadOnly" handle-update="handleUpdate"></attribute-types>
                     </article>
                 </section>
             </div>
