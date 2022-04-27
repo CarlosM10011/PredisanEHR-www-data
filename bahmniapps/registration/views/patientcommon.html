@@ -328,7 +328,7 @@
         </div>
     </div>
 
-    <div ng-repeat="section in ::patientConfiguration.getOrderedPatientAttributesSections()" class="otherInfoContainer">
+    <div ng-model="patient.responsibleSigning" ng-repeat="attribute in patient.ResponsibleSigning " class="otherInfoContainer">
         <div ng-if="section.canShow">
             <div class="box-container form" ng-if="::(section.attributes.length > 0 && section.title)">
                 <legend class="additional-attribute" toggle="section3.expand">
