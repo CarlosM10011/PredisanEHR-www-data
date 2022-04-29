@@ -27,7 +27,7 @@
   "REGISTRATION_LABEL_CASTE_SAME_LAST_NAME" : "Caste same as Last Name",
   "REGISTRATION_LABEL_ADMISSION_TYPE" : "Admission Type",
   "REGISTRATION_LABEL_GENDER" : "Gender",
-  "REGISTRATION_LABEL_CELL": "Cellphone / Whatsapp",
+  "PATIENT_ATTRIBUTE_CELLPHONE": "Cellphone / Whatsapp",
   "REGISTRATION_LABEL_HOME": "Homephone / Other Lines",
   "REGISTRATION_LABEL_EMAIL": "Email",
   "REGISTRATION_LABEL_FACEBK": "Facebook",
@@ -126,6 +126,5 @@
   "PROGRAM_DELETE_REASON_PLACEHOLDER": "Reason to delete the program",
   "DELETE_LABEL": "Delete",
   "EDIT_LABEL": "Edit",
-  "REGISTRATION_LABEL_RELATIONSHIP_EXISTS": "Given relationship already exists",
-  "cellphone" : "Cellphone / Whatsapp"
+  "REGISTRATION_LABEL_RELATIONSHIP_EXISTS": "Given relationship already exists"
 }
