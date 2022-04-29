@@ -5,7 +5,7 @@
     "REGISTRATION_TITLE_KEY": "Registro de Pacientes",
     "REGISTRATION_LABEL_SCANNED": "Escaneada",
     "REGISTRATION_LABEL_PAPER": "Papel",
-    "REGISTRATION_LABEL_CELL": "Celular / WhatsApp",
+    "PATIENT_ATTRIBUTE_CELLPHONE": "Celular / WhatsApp",
     "REGISTRATION_LABEL_HOME": "Teléfono fijo / Otras líneas",
     "REGISTRATION_LABEL_EMAIL": "Correo electrónico",
     "REGISTRATION_LABEL_FACEBK": "Facebook",
