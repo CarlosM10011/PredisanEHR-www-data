@@ -28,6 +28,7 @@
             "patientInformation": {
                 "otherInformation": {
                     "title": "Other Information",
+                    "translationKey": "REGISTRATION_LABEL_OTHER_INFO",
                     "attributes": [
                         "cellphone",
                         "homephone",
